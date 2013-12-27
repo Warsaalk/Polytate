@@ -6,6 +6,7 @@ CODE will be pushed soon
 **Still working on this page**
 
 ## Index
+- [Live example][link0]
 - [Demo][link1]
 - [Info][link2]
 - [Usage][link3]
@@ -15,7 +16,38 @@ CODE will be pushed soon
 - [Browser support][link7]
 - [License][link8]
 
+## Live example
+
+I designed Polytate for one of my website, [UniverseView](http://universeview.be).
+
 ## Demo
+
+The demo is hosted on my website.
+Link to the: [Demo][demo]
+
+Feel free to inspect the HTML and other code to view how Polytate is used.
+
+Polytate options used in demo:
+**Right Polytate**
+```javascript
+	{
+		appendTo		: 'hor',
+		orientation		: $PT.HORIZONTAL,
+		reverse			: false,
+		context			: '#hori'
+	}
+```
+**Left Polytate**
+```javascript
+	{
+			
+		appendTo		: 'ver',
+		orientation		: $PT.VERTICAL,
+		reverse			: true,
+		context			: document.getElementById('vert'),
+		preLoad			: true
+	}
+```
 
 ## Info
 
@@ -108,7 +140,9 @@ Klaas Van Parys
 Licensed under [MIT][mit]. Have fun.
 
 [mit]: http://www.opensource.org/licenses/mit-license.php
+[demo]: http://polytate.warsaalk.be/
 [jquery]: http://jquery.com/
+[link0]: https://github.com/Warsaalk/Polytate#live-example
 [link1]: https://github.com/Warsaalk/Polytate#demo
 [link2]: https://github.com/Warsaalk/Polytate#info
 [link3]: https://github.com/Warsaalk/Polytate#usage

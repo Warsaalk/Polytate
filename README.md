@@ -121,7 +121,7 @@ When an item is clicked and the pane is loaded the class `polytate-selected` wil
 
 While loading a page, an element with the class `polytate-loader` will be appended to the desination pane untill the page is fully loaded. 
 
-If the content a pane is higher than the pane its height the class `polytate-scrollbar` will be appended to that pane. The default css of that class is `margin-right: -15px;`. This can be useful when you want to center the content inside the pane. 
+If the content of a pane is higher than the pane its height the class `polytate-scrollbar` will be appended to that pane. The default css for that class is `margin-right: -15px;`. 
 
 ## Requirements
   - jQuery (tested version: v1.10.2)

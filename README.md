@@ -57,13 +57,6 @@ The script works for n number of panes, 1...n.
   - 4 panes = square
   - 5 panes = pentagon
   - ...
-
-The polygon rotates in the order the items are positioned in the HTML. So when you push the second item i'll to the second pane, from right to left.
-When you go from the first to the last pane it won't do the whole rotation back to the beginning but it goes directly from the first to the last.
-Which means it rotates from the left to the right and the other way if you go from the last to the first.
-
-The position of the panes gets calculated at 2 events, once upon creation and also when the screen size changes.  
-The rotation doesn't change the panes but rotates the entire polygon.  
   
 ## Usage
 
@@ -113,6 +106,21 @@ At the bottom of the page you can create a Polytate instance, you can call the m
 	Polytate.init(); //This is OPTIONAL, if not present the first creation will handle the initialization
 	Polytate.createInstance( options );
 ```
+
+## Behaviour
+
+The polygon rotates in the order the items are positioned in the HTML. So when you push the second item i'll to the second pane, from right to left.
+When you go from the first to the last pane it won't do the whole rotation back to the beginning but it goes directly from the first to the last.
+Which means it rotates from the left to the right and the other way if you go from the last to the first.
+
+The position of the panes gets calculated at 2 events, once upon creation and also when the screen size changes.  
+The rotation doesn't change the panes but rotates the entire polygon.  
+
+When an item is clicked and the pane is loaded the class `polytate-selected` will be appended, which enables you to style the clicked item.
+
+While loading a page, an element with the class `polytate-loader` will be appended to the desination pane untill the page is fully loaded. 
+
+If the content a pane is higher than the pane its height the class `polytate-scrollbar` will be appended to that pane. The default css of that class is `margin-right: -15px;`. This can be useful when you want to center the content inside the pane. 
 
 ## Requirements
   - jQuery (tested version: v1.10.2)

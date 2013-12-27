@@ -3,7 +3,6 @@
 Make switching between pages on your website more fun.
 
 CODE will be pushed soon
-**Still working on this page**
 
 ## Index
 - [Live example][link0]

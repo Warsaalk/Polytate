@@ -9,7 +9,7 @@ This script generates, when you look at it from the top side, a convex polygon.
 That also explains the name Polytate, Polygon rotate. Apologies if i'm use the terms in an incorrect way.
 You'll notice i use the words convex a lot, it's the set of panes (pages) which make the convex polygon.
 The script works for n number of panes, 1...n.
-  - 3 panes result in an triangle 
+  - 3 panes results in an triangle 
   - 4 panes = square
   - 5 panes = pentagon
   - ...
@@ -24,7 +24,7 @@ The rotation doesn't change the panes but rotates the entire polygon.
 Requirements:
   - jQuery (tested version: v1.10.2)
 	
-Browser support: 
+Browser support:
 Tested in (with preserve-3d support):
   - Google Chrome : 31.0.1650.63 m
   - Mozilla Firefox : 25.0.1 & 26.0

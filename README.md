@@ -2,7 +2,7 @@
 
 Make switching between pages on your website more fun.
 
-CODE will be pushed soon
+The CSS and Javascript can be downloaded from download folder !
 
 ## Index
 - [Live example][link0]

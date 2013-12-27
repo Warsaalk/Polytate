@@ -9,8 +9,9 @@ The CSS and Javascript can be downloaded from download folder !
 - [Demo][link1]
 - [Info][link2]
 - [Usage][link3]
-- [Options][link4]
-- [Options example][link5]
+- [Options][link4a]
+- [Options example][link4b]
+- [Behaviour][link5]
 - [Requirements][link6]
 - [Browser support][link7]
 - [License][link8]
@@ -152,8 +153,9 @@ Licensed under [MIT][mit]. Have fun.
 [link1]: https://github.com/Warsaalk/Polytate#demo
 [link2]: https://github.com/Warsaalk/Polytate#info
 [link3]: https://github.com/Warsaalk/Polytate#usage
-[link4]: https://github.com/Warsaalk/Polytate#options
-[link5]: https://github.com/Warsaalk/Polytate#options-example
+[link4a]: https://github.com/Warsaalk/Polytate#options
+[link4b]: https://github.com/Warsaalk/Polytate#options-example
+[link5]: https://github.com/Warsaalk/Polytate#behaviour
 [link6]: https://github.com/Warsaalk/Polytate#requirements
 [link7]: https://github.com/Warsaalk/Polytate#browser-support-tested
 [link8]: https://github.com/Warsaalk/Polytate#license

@@ -5,6 +5,18 @@ Make switching between pages on your website more fun.
 CODE will be pushed soon
 **Still working on this page**
 
+## Index
+- [Demo][link1]
+- [Info][link2]
+- [Usage][link3]
+- [Options][link4]
+- [Options example][link5]
+- [Requirements][link6]
+- [Browser support][link7]
+- [License][link8]
+
+## Demo
+
 ## Info
 
 The script generates, when you look at it from the top side, a convex polygon.
@@ -93,8 +105,15 @@ Klaas Van Parys
 
 ## License
 
-Licensed under [MIT][mit]. Enjoy.
+Licensed under [MIT][mit]. Have fun.
 
 [mit]: http://www.opensource.org/licenses/mit-license.php
 [jquery]: http://jquery.com/
-[exampleoption]: https://github.com/Warsaalk/Polytate#options-example
+[link1]: https://github.com/Warsaalk/Polytate#demo
+[link2]: https://github.com/Warsaalk/Polytate#info
+[link3]: https://github.com/Warsaalk/Polytate#usage
+[link4]: https://github.com/Warsaalk/Polytate#options
+[link5]: https://github.com/Warsaalk/Polytate#options-example
+[link6]: https://github.com/Warsaalk/Polytate#requirements
+[link7]: https://github.com/Warsaalk/Polytate#browser-support-tested
+[link8]: https://github.com/Warsaalk/Polytate#license

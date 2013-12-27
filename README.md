@@ -94,4 +94,4 @@ Licensed under [MIT][mit]. Enjoy.
 
 [mit]: http://www.opensource.org/licenses/mit-license.php
 [jquery]: http://jquery.com/
-[exampleoption]: https://github.com/Warsaalk/Polytate/edit/master/README.md#options-example
+[exampleoption]: https://github.com/Warsaalk/Polytate#options-example

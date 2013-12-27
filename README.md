@@ -48,25 +48,27 @@ At the bottom of the page you can create a Polytate instance, you can call the m
 ### Options
  They are all optional.
 
- - appendTo: The element the polygon should be appended to, this should be the ID of an element. Values: string
- - context: A context where the instance should search its pages, with class="polytate-item". Values: an Element like in the [Options example][optionexample], a NodeList or a CSS2 selector
- - forceReload: Always force reloading a page on rotation or link click. Values: `true` or `false`
- - preLoad: Preload all the pages into the polygon. Values: `true` or `false` **Attention** This doesn't work in browser which don't support 3d, you could create a fallback by using the `$PT.loadPage()` function.
- - beforeRotate: TODO
- - orientation
- - reverse
+| Option      	| Values/Types        | Description                                                                                                        |
+| ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `appendTo`    | `string`   		  | The element the polygon should be appended to, the string must be the ID of an element. |
+| `context` 	| `Node`, `NodeList` or `selector`   | A context where the instance should search its items, with *class="polytate-item"*. The selector is limited to CSS2 selectors. |
+| `forceReload`    | `true` or `false`   | Always force reloading a page on rotation or item click. |
+| `preLoad`    | `true` or `false`   | Preload all the pages into the polygon. **Attention:** This doesn't work in browsers which don't support 3d, you could create a fallback by using the `$PT.loadPage()` function when the site is loaded. |
+| `beforeRotate`     | `function` | An callback function which needs to be executed before the polygon starts rotating. |
+| `orientation`     | `$PT.HORIZONTAL` or `$PT.VERTICAL` | The orientation of the rotation and panes. `$PT.HORIZONTAL` uses rotation around the x-axis and `$PT.VERTICAL` around the z-axis. |
+| `reverse`    | `true` or `false`           | Reverse the rotation. |
 
 ### Options example
 ```javascript
 	var options = {
-		appendTo		: 'page',
-		orientation		: $PT.VERTICAL,
-		reverse			: true,
-		context			: document.getElementById('menu'),
-		preLoad			: true
+		appendTo		: 'page', //Append to the element with ID "page"
+		orientation		: $PT.VERTICAL, //Use vertical rotation
+		reverse			: true, //Reverse the rotation
+		context			: document.getElementById('menu'), //Append to the element with ID "menu"
+		preLoad			: true //Preload all the pages
 	};
 			
-	Polytate.init(); //This is OPTIONAL, else the first creation will handle the initialization
+	Polytate.init(); //This is OPTIONAL, if not present the first creation will handle the initialization
 	Polytate.createInstance( options );
 ```
 

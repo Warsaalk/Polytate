@@ -31,7 +31,7 @@ First in the HTML head you'll need to add the css and javascript.
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/polytate.min.js"></script>
 ```
-The pages you want to use need to be links, A elements in HTML. They also need to have this class: polytate-item
+The pages you want to use need to be links, A elements in HTML, i call them items. They also need to have this class: polytate-item. When the same link is used in the same context, they'll point to the same pane.
 ```html
 	<ul id="menu">
 		<li><a href="one.html" class="polytate-item">One</a></li>

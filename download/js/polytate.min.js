@@ -1,4 +1,6 @@
 /**
+* Polytate v1.0.0
+*
 * The MIT License (MIT)
 * 
 * Copyright (c) 2013 Klaas Van Parys (Warsaalk)

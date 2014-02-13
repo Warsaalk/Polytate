@@ -1,0 +1,31 @@
+/**
+* Polytate v1.0.0
+*
+* The MIT License (MIT)
+* 
+* Copyright (c) 2013 Klaas Van Parys (Warsaalk)
+* 
+* Permission is hereby granted, free of charge, to any person obtaining a copy of
+* this software and associated documentation files (the "Software"), to deal in
+* the Software without restriction, including without limitation the rights to
+* use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+* the Software, and to permit persons to whom the Software is furnished to do so,
+* subject to the following conditions:
+* 
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+* 
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+* FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+* COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+* IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+* CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+**/
+html, body { min-height: 100%; margin: 0; padding: 0; height: 100%; overflow-y: hidden; }
+
+.polytate-wrap { height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; z-index: 1; perspective: none; -webkit-perspective: none; -moz-perspective: none; -ms-perspective: none; -o-perspective: none; perspective-origin: 50% 50%; -webkit-perspective-origin: 50% 50%; -moz-perspective-origin: 50% 50%; -ms-perspective-origin: 50% 50%; -o-perspective-origin: 50% 50%; }
+.polytate-convex { height: 100%; width: 100%; position: relative; z-index: 1; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; -ms-transform-style: preserve-3d; -o-transform-style: preserve-3d; transition: -webkit-transform 2s; -webkit-transition: -webkit-transform 2s; -moz-transition: -moz-transform 2s; -ms-transition: -ms-transform 2s; -o-transition: -o-transform 2s; }
+.polytate-pane { height: 100%; width: 100%; position: absolute; vertical-align: middle; overflow-y: auto; }
+.polytate-pane .polytate-loader { /* LOADER for when ajax page is loaded */ }
+.polytate-scrollbar { margin-right: -15px; }

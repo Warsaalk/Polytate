@@ -1,5 +1,5 @@
 /**
-* Polytate v1.0.0
+* Polytate v1.0.1
 *
 * The MIT License (MIT)
 * 
@@ -119,6 +119,10 @@
 				
 		}
 		
+		//Object to fake preventDefault
+		function FakeEvent(){}
+		FakeEvent.prototype.preventDefault = function(){};
+		window.FakeEvent = FakeEvent;
 		/**
 		*
 		* This script generates, when you look at it from the top side, a convex polygon.
@@ -167,6 +171,7 @@
 				
 				this.indices = []; //Holds all hrefs, for excluding doubles & for searching
 				this.maxPane = 0;
+				this.triggers= {};
 				
 				this.state	= {
 				
@@ -186,7 +191,8 @@
 						preLoad			: false, //Preload all the pages in the panes
 						beforeRotate	: function(){}, //Before the rotation & loading starts do something
 						orientation		: 0, //Default horizontal rotation
-						reverse			: false
+						reverse			: false,
+						allowTrigger	: false //Allow to trigger change panel via href
 				
 				};
 
@@ -248,6 +254,30 @@
 		
 		};
 		
+		PolytateObject.prototype.initTrigger = function( href, turnIndex ){
+		
+				var trigger = document.createElement('a');
+				
+				trigger.href = href;
+				trigger.setAttribute( 'polytate-turnindex', turnIndex );
+				
+				if( !$PT.support3d ) trigger.setAttribute( 'polytate-no3d', 1 );
+				if( /^https?:\/\//i.test( href ) ) href = href.split("/").pop(); //Only get the string behind the last slash
+				
+				this.triggers[ href ] = trigger;
+		
+		};
+		
+		PolytateObject.prototype.triggerPane = function( href ){
+		
+				if( "undefined" !== typeof this.triggers[ href ] ){
+					
+						this.changePanel( this.triggers[ href ], new FakeEvent() );
+					
+				}
+		
+		};
+		
 		PolytateObject.prototype.createConvex = function(){
 		
 				var parent = document.getElementsByTagName('body')[0]; //Default parent for the convex
@@ -285,6 +315,10 @@
 								
 								this.indices[ ix ] = this.DOM.items[ i ].href;
 								this.DOM.items[ i ].setAttribute( 'polytate-turnindex', ix ); //Set turn index
+								
+								if( this.options.allowTrigger ){
+									this.initTrigger( this.DOM.items[ i ].href, ix ); 
+								}
 								
 								if( $PT.support3d && this.options.preLoad ) $PT.loadPage( this.DOM.items[ i ], this.DOM.panes[ ix ] ); //If preLoad = true, preload the pages in the panes
 								
@@ -392,7 +426,7 @@
 						if( this.state.angle == 360 ){ iAngle = 0; Opposite = 0; } //There is only 1 pane and we don't want to turn that one 360° or translate it
 						if( this.state.angle == 180 && i > 0 ) Opposite = 1; //There are only 2 panes and we don't want that they overlap so we translate the 2nd by 1px
 						
-						pane.style.lineHeight = this.DOM.convex.clientHeight+'px'; //TODO: remove when using in live version, this is only for a test purpose
+						//pane.style.lineHeight = this.DOM.convex.clientHeight+'px'; //TODO: remove when using in live version, this is only for a test purpose
 						
 						this.transformation.transformPane( pane, iAngle, Opposite );
 				

@@ -1,8 +1,8 @@
 # Polytate
 
-Make switching between pages on your website more fun.
+Make switching between pages more fun on your website.
 
-The CSS and Javascript can be downloaded from download folder !
+The CSS and Javascript can be downloaded from the download folder !
 
 ## Index
 - [Live example][link0]
@@ -24,7 +24,7 @@ I designed Polytate for one of my websites, [UniverseView](http://universeview.b
 
 Link to the [Demo][demo]
 
-Feel free to inspect the HTML and other code to view how Polytate is used.
+Feel free to inspect the HTML and other code to view how Polytate can be used.
 
 Polytate options used in demo:  
 **Right Polytate**
@@ -51,8 +51,8 @@ Polytate options used in demo:
 ## Info
 
 The script generates, when you look at it from the top side, a convex polygon.  
-That also explains the name Polytate, Polygon rotate. Apologies if i'm use the terms in an incorrect way.  
-You'll notice i use the words convex a lot, it's the set of panes (pages) which make the convex polygon.  
+That also explains the name Polytate, Polygon rotate. Apologies if I'm use the terms in an incorrect way.  
+You'll notice that I use the word convex a lot, it's the set of panes (pages) which make the convex polygon.  
 The script works for n number of panes, 1...n.  
   - 3 panes results in an triangle 
   - 4 panes = square
@@ -61,13 +61,13 @@ The script works for n number of panes, 1...n.
   
 ## Usage
 
-First in the HTML head you'll need to add the css and javascript.
+First you'll need to add this css and javascript in head tag of your HTML page.
 ```html
 	<link rel="stylesheet" type="text/css" href="css/polytate.css" media="screen" />
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/polytate.min.js"></script>
 ```
-The pages you want to use need to be links, A elements in HTML, i call them items. They also need to have this class: polytate-item. When the same link is used in the same context, they'll point to the same pane.
+The pages you want to use need to be links, <A> elements in HTML, I call them items. They also need to have this class: "polytate-item". When the same link is used in the same context, they'll point to the same pane.
 ```html
 	<ul id="menu">
 		<li><a href="one.html" class="polytate-item">One</a></li>
@@ -76,13 +76,13 @@ The pages you want to use need to be links, A elements in HTML, i call them item
 		<li><a href="four.html" class="polytate-item">Four</a></li>
 	</ul>
 ```
-At the bottom of the page you can create a Polytate instance, you can call the method by using the global variable, Polytate or $PT
+At the bottom of the page you can create a Polytate instance, you can do this by calling the method "createInstance" defined in the global object Polytate or $PT
 ```javascript
 	Polytate.createInstance(); //OR $PT.createInstance();
 ```
 
 ### Options
- They are all optional.
+ These are all optional.
 
 | Option      	| Values/Types        | Description                                                                                                        |
 | ------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -110,18 +110,18 @@ At the bottom of the page you can create a Polytate instance, you can call the m
 
 ## Behaviour
 
-The polygon rotates in the order the items are positioned in the HTML. So when you push the second item i'll to the second pane, from right to left.
+The polygon rotates in the order the items are positioned in the HTML, when you push the second item it'll rotate clockwise to the second pane.
 When you go from the first to the last pane it won't do the whole rotation back to the beginning but it goes directly from the first to the last.
-Which means it rotates from the left to the right and the other way if you go from the last to the first.
+This means it rotates counterclockwise and clockwise if you go from the last to the first.
 
 The position of the panes gets calculated at 2 events, once upon creation and also when the screen size changes.  
 The rotation doesn't change the panes but rotates the entire polygon.  
 
-When an item is clicked and the pane is loaded the class `polytate-selected` will be appended, which enables you to style the clicked item.
+When an item is clicked and the pane is loaded the class `polytate-selected` will be added, which enables you to style the selected item.
 
-While loading a page, an element with the class `polytate-loader` will be appended to the desination pane untill the page is fully loaded. 
+While loading a page, an element with the class `polytate-loader` will be added to the desination pane untill the page is fully loaded. 
 
-If the content of a pane is higher than the pane its height the class `polytate-scrollbar` will be appended to that pane. The default css for that class is `margin-right: -15px;`. 
+If the content of a pane is higher than the pane itself the class `polytate-scrollbar` will be added to that pane. The default css for that class is `margin-right: -15px;`.
 
 ## Requirements
   - jQuery (tested version: v1.10.2)

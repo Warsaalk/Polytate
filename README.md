@@ -5,7 +5,6 @@ Make switching between pages more fun on your website.
 The CSS and Javascript can be downloaded from the download folder !
 
 ## Index
-- [Live example][link0]
 - [Demo][link1]
 - [Info][link2]
 - [Usage][link3]
@@ -15,10 +14,6 @@ The CSS and Javascript can be downloaded from the download folder !
 - [Requirements][link6]
 - [Browser support][link7]
 - [License][link8]
-
-## Live example
-
-I designed Polytate for one of my websites, [UniverseView](http://universeview.be).
 
 ## Demo
 
@@ -149,7 +144,6 @@ Licensed under [MIT][mit]. Have fun.
 [mit]: http://www.opensource.org/licenses/mit-license.php
 [demo]: http://polytate.warsaalk.be/
 [jquery]: http://jquery.com/
-[link0]: https://github.com/Warsaalk/Polytate#live-example
 [link1]: https://github.com/Warsaalk/Polytate#demo
 [link2]: https://github.com/Warsaalk/Polytate#info
 [link3]: https://github.com/Warsaalk/Polytate#usage
